@@ -21,10 +21,34 @@
   background-color: #eee;
 } */
 
+button {
+  margin-bottom: 8px;
+}
+
 #changeColor {
-  color: red;
-  height: 30px;
-  width: 100px;
-  padding: 10px;
-  border: 1px solid;
+  color: white;
+  background-image: url("/images/trashcan.png");
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  border-radius: 20px;
+  /* border: 1px solid #264289; */
+}
+
+#stackOverflow {
+  color: white;
+  background-image: url("/images/code.png");
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  border-radius: 20px;
+}
+
+#funPages {
+  color: white;
+  background-image: url("/images/sara.jpg");
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  border-radius: 20px;
 }
