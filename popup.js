@@ -1,11 +1,12 @@
-//First Button
+//Buttons
 let changeColor = document.getElementById("changeColor");
 changeColor.addEventListener("click", deleteEverything);
 let stackOverflow = document.getElementById("stackOverflow");
 stackOverflow.addEventListener("click", goToStack);
-
-//changeColor.style.backgroundColor = data.color;
-//changeColor.setAttribute("value", data.color);
+let funPages = document.getElementById("funPages");
+funPages.addEventListener("click", goToFun);
+// let funPages = document.getElementById("funPages");
+// funPages.addEventListener("click", goToFun);
 
 //Delete the entire window
 function deleteEverything() {
@@ -29,6 +30,24 @@ function goToStack() {
   //   "https://www.dummies.com/programming/java/javascript-for-dummies-cheat-sheet/";
   let randomNumber = Math.floor(Math.random() * workPages.length);
   let newURL = workPages[randomNumber];
-  console.log("it worked i guess");
+  console.log("stack overflow");
+  chrome.tabs.create({ url: newURL });
+}
+
+let fun = [
+  "https://www.cartoonnetwork.com/",
+  "https://gameofthrones.fandom.com/wiki/Game_of_Thrones_Wiki",
+  "http://www.dreamville.com/",
+  "https://www.cnbc.com/",
+  "https://robinhood.com/us/en/"
+];
+
+function goToFun() {
+  //an
+  // var newURL =
+  //   "https://www.dummies.com/programming/java/javascript-for-dummies-cheat-sheet/";
+  let randomNumber = Math.floor(Math.random() * fun.length);
+  let newURL = fun[randomNumber];
+  console.log("not coding");
   chrome.tabs.create({ url: newURL });
 }
